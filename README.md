@@ -1,44 +1,44 @@
-# Στο Πιάτο
+# Sto Piato
 
-Μια ελληνόφωνη εφαρμογή delivery φαγητού, φτιαγμένη με React. Παρουσιάζει εστιατόρια της γειτονιάς και επιτρέπει στον επισκέπτη να αναζητήσει, να φιλτράρει και να προσθέσει επιλογές σε ένα demo καλάθι.
+A food delivery application built with React. It showcases local restaurants and lets visitors search, filter, and add selections to a demo cart.
 
-## Εκκίνηση
+## Getting Started
 
-Χρειάζεσαι εγκατεστημένα τα Node.js και npm.
+Make sure Node.js and npm are installed.
 
 ```bash
 npm install
 npm start
 ```
 
-Άνοιξε τη διεύθυνση που εμφανίζει το Vite στο terminal, συνήθως `http://localhost:5173/`. Στο GitHub Codespaces, άνοιξε την καρτέλα **Ports** και επίλεξε **Open in Browser** για τη θύρα `5173`.
+Open the address shown by Vite in the terminal, usually `http://localhost:5173/`. In GitHub Codespaces, open the **Ports** tab and select **Open in Browser** for port `5173`.
 
-Χρήσιμες εντολές:
+Useful commands:
 
-| Εντολή | Τι κάνει |
+| Command | Description |
 | --- | --- |
-| `npm start` | Ξεκινά τον development server, διαθέσιμο και μέσω port forwarding. |
-| `npm run dev` | Ξεκινά τον development server. |
-| `npm run build` | Δημιουργεί την έκδοση παραγωγής στον φάκελο `dist/`. |
-| `npm run preview` | Κάνει preview την έκδοση παραγωγής μετά το build. |
+| `npm start` | Starts the development server, available through port forwarding. |
+| `npm run dev` | Starts the development server. |
+| `npm run build` | Creates the production build in the `dist/` directory. |
+| `npm run preview` | Previews the production build after it has been built. |
 
-## Τι περιλαμβάνει
+## Features
 
-- Αναζήτηση εστιατορίων με βάση το όνομα και το είδος κουζίνας.
-- Φίλτρα ανά κατηγορία, όπως pizza, burger, sushi και καφές.
-- Προσθήκη και αφαίρεση αγαπημένων.
-- Demo καλάθι με μετρητή προϊόντων.
-- Responsive σχεδιασμό για κινητά και υπολογιστές.
+- Search restaurants by name and cuisine.
+- Filter by category, including pizza, burgers, sushi, and coffee.
+- Add and remove restaurants from favorites.
+- Demo cart with an item counter.
+- Responsive layout for mobile and desktop.
 
-## Πώς λειτουργεί
+## How It Works
 
-Η εφαρμογή ξεκινά από το `index.html`, το οποίο περιέχει το στοιχείο `#root`. Το `src/main.jsx` δημιουργεί το React root και εμφανίζει το component `App`.
+The application starts from `index.html`, which contains the `#root` element. `src/main.jsx` creates the React root and renders the `App` component.
 
-Στο `src/App.jsx` βρίσκονται τα δεδομένα των κατηγοριών και των εστιατορίων, καθώς και η κύρια λογική της σελίδας. Τα `useState` κρατούν τις επιλογές του χρήστη, όπως την κατηγορία, την αναζήτηση και το περιεχόμενο του καλαθιού. Η λίστα εστιατορίων φιλτράρεται με βάση την κατηγορία και το κείμενο αναζήτησης, και τα αποτελέσματα εμφανίζονται ως React components.
+`src/App.jsx` contains the category and restaurant data, along with the main page logic. `useState` stores user selections such as the active category, search query, and cart contents. The restaurant list is filtered by category and search query, and the results are rendered as React components.
 
-Το `src/styles.css` περιέχει τα styles, τα responsive breakpoints και τα animations. Το `package.json` ορίζει τις εξαρτήσεις και τις διαθέσιμες εντολές npm.
+`src/styles.css` contains the styles, responsive breakpoints, and animations. `package.json` defines the dependencies and available npm commands.
 
-## Δομή αρχείων
+## Project Structure
 
 ```text
 .
@@ -50,8 +50,8 @@ npm start
 	└── styles.css
 ```
 
-## Τρέχοντα όρια
+## Current Limitations
 
-Πρόκειται για frontend demo. Τα εστιατόρια και οι τιμές είναι ενδεικτικά, ενώ το καλάθι λειτουργεί μόνο στη σελίδα και δεν ολοκληρώνει πραγματικές παραγγελίες. Δεν υπάρχει ακόμη backend, σύνδεση χρήστη ή πληρωμή. Οι εικόνες και οι γραμματοσειρές φορτώνονται από εξωτερικές υπηρεσίες, οπότε χρειάζεται σύνδεση στο διαδίκτυο για να εμφανιστούν.
+This is a frontend demo. Restaurant listings and prices are sample data, and the cart only works in the browser; it does not place real orders. There is no backend, user authentication, or payment processing yet. Images and fonts are loaded from external services, so an internet connection is required to display them.
 
-Για να είναι διαθέσιμο σε recruiters με δημόσιο link, χρειάζεται deploy σε υπηρεσία φιλοξενίας, όπως το Vercel ή το Netlify. Το `npm start` ξεκινά την εφαρμογή τοπικά ή μέσα στο Codespaces, αλλά από μόνο του δεν δημιουργεί δημόσιο site.
+To share the application with recruiters through a public link, deploy it to a hosting service such as Vercel or Netlify. `npm start` runs the application locally or in Codespaces, but does not create a public website by itself.
